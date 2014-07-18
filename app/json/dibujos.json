@@ -1,0 +1,17 @@
+[
+	{
+		"Full":"images/album5/dibujos_1.jpg",
+		"Thumbnail":"images/album5/thumbs/dibujos_1.jpg",
+		"Alt":"Dibujo 1"
+	},
+	{
+		"Full":"images/album5/dibujos_2.jpg",
+		"Thumbnail":"images/album5/thumbs/dibujos_2.jpg",
+		"Alt":"Dibujo 2"
+	},
+	{
+		"Full":"images/album5/dibujos_3.jpg",
+		"Thumbnail":"images/album5/thumbs/dibujos_3.jpg",
+		"Alt":"Dibujo 3"
+	}
+]

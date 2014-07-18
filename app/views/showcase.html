@@ -1,0 +1,33 @@
+<div class="section showcase" id="showcase" ng-controller="GaleriaController">
+	<div class="container">
+		<div class="arrow 02">
+			<img src="images/arrow/arrow_02.png" alt="arrow_02">
+		</div>
+		<div class="subheader">
+			<div class="subheader-icon"></div>
+			<div class="subheader-text">
+				Galeria <span>Dale una mirada a nuestra Galeria</span>
+			</div>
+		</div>
+		<div class="clear"></div>
+
+		<div class="showcase-sub-container" ng-controller="TabController as seccionTab">
+			<tabs-showcase></tabs-showcase>
+
+			<div id="myTabContent" class="tab-content text-center">
+				<div class="clearfix"></div>
+				
+				<galeria-showcase></galeria-showcase>
+
+				<div class="clearfix"></div>
+
+				<galeria-modal-showcase></galeria-modal-showcase>
+
+			</div>
+			
+			<tabs-showcase></tabs-showcase>	
+
+			<div class="clearfix"></div>  
+		</div>       
+	</div>
+</div>

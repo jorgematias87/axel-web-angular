@@ -1,0 +1,17 @@
+[
+	{
+		"Full":"images/album1/pasacalles_01.jpg",
+		"Thumbnail":"images/album1/thumbs/pasacalles_01.jpg",
+		"Alt":"Pasacalles 1"
+	},
+	{
+		"Full":"images/album1/pasacalles_02.jpg",
+		"Thumbnail":"images/album1/thumbs/pasacalles_02.jpg",
+		"Alt":"Pasacalles 2"
+	},
+	{
+		"Full":"images/album1/pasacalles_03.jpg",
+		"Thumbnail":"images/album1/thumbs/pasacalles_03.jpg",
+		"Alt":"Pasacalles 3"
+	}
+]
