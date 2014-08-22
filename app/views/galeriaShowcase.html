@@ -1,13 +1,13 @@
-<!--album 1-->
-<div class="tab-pane fade" ng-class="{active:done, in:done}">
+<!--album-->
+<div class="tab-pane" id="{{motivo | lowercase}}">
 	<div class="summary m-bottom-22">
 		Pasacalles de {{motivo}}
 	</div>
 	<ul class="list-group list-unstyled">
 		<li class="col-xs-6 col-md-3" ng-repeat="imagen in imagenes" >
-			<a href="{{imagen.Full}}" title="{{imagen.Alt}}" class="thumbnail" data-gallery="#blueimp-gallery-cumpleanios">
+			<a href="{{imagen.Full}}" title="{{imagen.Alt}}" class="thumbnail" data-gallery="#blueimp-gallery-{{motivo | lowercase}}">
 				<img src="{{imagen.Thumbnail}}" alt="{{imagen.Alt}}"/>
 			</a>
 		</li>
 	</ul>
-</div><!--fin album 1-->
+</div><!--fin album-->

@@ -7,13 +7,16 @@
  * # MainCtrl
  * Controller of the axelWebAngularApp
  */
- var app = angular.module('axelWebAngularApp',["templatesDirectivas"]);
+ var app = angular.module('axelWebAngularApp',["templatesDirectivas", "ngAnimate", 'duScroll']);
 
  app.controller('GaleriaController', ['$scope', '$http',
  	function($scope, $http){
+
  		$scope.motivo = "cumpleaños";
  		$scope.done= false;
  		
+ 		ObtenerJSON($scope.motivo);
+
  		function ObtenerJSON (motivo){
  			$http.get('json/'+motivo+'.json').success(function(data) {
  				$scope.imagenes = data;
@@ -21,8 +24,6 @@
  				console.log('Error:' + data);
  			});
  		};
-
- 		ObtenerJSON($scope.motivo);
 
  		$scope.ObtenerImagenes =  function(value){
  			

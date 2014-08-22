@@ -216,7 +216,7 @@ a:active
   outline: none;
   cursor: pointer;
 }
-.menu-abs-bg.nav-active
+.menu-abs-bg.active
 {
   width: 100%;
 }
@@ -1152,3 +1152,17 @@ a.thumbnail:hover {
 .white-social-twit  {background-image: url("one_icons/social_twitter.png");background-repeat: no-repeat}
 .white-social-goog  {background-image: url("one_icons/social_google_plus.png");background-repeat: no-repeat}
 .white-social-yout  {background-image: url("one_icons/social_youtube.png");background-repeat: no-repeat}
+
+.col-xs-6.col-md-3.ng-enter {
+  -webkit-animation: bounceIn 1s;
+  -moz-animation: bounceIn 1s;
+  -ms-animation: bounceIn 1s;
+  animation: bounceIn 1s;
+}
+
+.col-xs-6.col-md-3.ng-leave {
+  -webkit-animation: bounceOut 1s;
+  -moz-animation: bounceOut 1s;
+  -ms-animation: bounceOut 1s;
+  animation: bounceOut 1s;
+}

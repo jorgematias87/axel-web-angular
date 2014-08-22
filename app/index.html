@@ -9,10 +9,12 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery.css" />
     <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
     <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
-    <!-- endbower -->
+    <link rel="stylesheet" href="bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.css" />
+    <!-- endbower -->loc
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -41,11 +43,10 @@
         </tr>
       </table> -->
 
-      <div id="scrollable">
+      <div id="scrollable" du-scroll-container>
 
         <home></home>
         <services></services>
-        <about></about>
         <showcase></showcase>
         <contact-us></contact-us>
         
@@ -57,7 +58,7 @@
         </div>
       </div>
     </div><!-- fin contenedor contenido-->
-  </di
+  </div>
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
@@ -65,7 +66,6 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <!-- endbuild -->
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -76,6 +76,7 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
     <script src="bower_components/blueimp-gallery/js/blueimp-helper.js"></script>
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery.js"></script>
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery-fullscreen.js"></script>
@@ -83,15 +84,14 @@
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
+    <script src="bower_components/blueimp-gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="bower_components/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <script src="scripts/directives/templatesdirectivas.js"></script>
-        <script src="scripts/directives/tabsshowcase.js"></script>
         <!-- endbuild -->
 </body>
 </html>

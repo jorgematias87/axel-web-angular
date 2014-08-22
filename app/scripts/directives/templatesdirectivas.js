@@ -63,9 +63,19 @@ app.directive('galeriaShowcase', function(){
 });
 
 
-app.directive('galeriaModelShowcase', function(){
+app.directive('galeriaModalShowcase', function(){
 	return{
 		restrict: 'E',
 		templateUrl: 'views/galeriaModalShowcase.html'
 	}
+});
+
+app.directive('ini', function(){
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.data('useBootstrapModal', false);
+            element.toggleClass('blueimp-gallery-controls', true);
+        }
+    };
 });
