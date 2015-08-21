@@ -7,7 +7,8 @@
  * # MainCtrl
  * Controller of the axelWebAngularApp
  */
- var app = angular.module('axelWebAngularApp',["templatesDirectivas", "ngAnimate", 'duScroll']);
+ var app = angular.module('axelWebAngularApp',["templatesDirectivas", "ngAnimate", 'duScroll','angular-loading-bar'])
+ .value('duScrollDuration', 1000);
 
  app.controller('GaleriaController', ['$scope', '$http',
  	function($scope, $http){

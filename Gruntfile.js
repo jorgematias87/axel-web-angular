@@ -399,7 +399,7 @@ grunt.registerTask('build', [
   'cdnify',
   'cssmin',
   'uglify',
-  'filerev',
+  //'filerev',
   'usemin',
   'htmlmin'
   ]);

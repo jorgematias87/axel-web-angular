@@ -10,64 +10,8 @@
               </div>
             </div>
 
-            <div class="col-md-6 m-top-50 contact-form contact-us-x">
-
-              <div class="col-md-12">
-                <div class="summary m-bottom-40">
-                  Consultas
-                </div>
-              </div>
-              <div class="clear"></div>    
-
-              <form id="form" method="post" action="enviar.php"role="form">
-                <fieldset>
-                  <!-- Text input-->
-                  <div class="form-group">
-                    <label class="control-label" for="nombre">Nombre *</label>
-                    <input name="nombre" type="text" placeholder="ingrese su nombre..." class="form-control">
-                  </div>
-
-                  <!-- Text input-->
-                  <div class="form-group">
-                    <label class="control-label" for="localidad">Localidad</label>
-                    <input name="localidad" type="text" placeholder="ingrese su localidad..." class="form-control">
-                  </div>
-
-                  <!-- Text input-->
-                  <div class="form-group">
-                    <label class="control-label" for="direccion">Dirección</label>
-                    <input name="direccion" type="text" placeholder="ingrese su direccion..." class="form-control">
-                  </div>
-
-                  <!-- Text input-->
-                  <div class="form-group">
-                    <label class="control-label" for="telefono">Teléfono</label>
-                    <input name="telefono" type="text" placeholder="ingrese su teléfono" class="form-control">
-                  </div>
-
-                  <!-- Text input-->
-                  <div class="form-group">
-                    <label class="control-label" for="email">Email *</label>
-                    <input name="email" type="text" placeholder="ingrese su email..." class="form-control">
-                  </div>
-
-                  <!-- Textarea -->
-                  <div class="form-group">
-                    <label class="control-label" for="mensaje">Mensaje *</label>               
-                    <textarea class="form-control" name="mensaje" placeholder="ingrese su consulta..." style="height: 184px;"></textarea>
-                  </div>
-
-                  <div class="clearfix"></div>
-
-                  <button type="submit" id="btn_enviar" name="btn_enviar" class="btn btn-danger">Enviar</button>
-                  <button type="reset" id="borrar" name="borrar" class="btn btn-default">Borrar</button>
-
-                </fieldset>
-              </form>
-            </div>
-
-            <div class="col-md-6 m-top-50">
-              <div class="summary m-bottom-40">
+            <div class="col-md-5 m-top-50">
+              <div class="summary m-bottom-40 col-md-12">
                 Datos de Contacto
               </div>
 
@@ -101,11 +45,75 @@
                 <div class="socio_contact m-bottom-22">
                   <ul>
                     <li><a href="https://www.facebook.com/axelpasacalles" target="_blank" class="socio_contact_facebook"></a></li>
-                    <li><a href="" target="_blank" class="socio_contact_twitter"></a></li>
                   </ul>
                   <div class="clearfix"></div>
                 </div>
               </div>
+            </div>
+
+            <div class="col-md-7 m-top-50 contact-form contact-us-x">
+
+              <div class="col-md-12">
+                <div class="summary m-bottom-40">
+                  Consultas
+                </div>
+              </div>
+              <div class="clear"></div>    
+
+              <form id="form" name="form" method="post" action="enviar.php" role="form">
+                <fieldset>
+                  <!-- Text input-->
+                  <div class="form-group col-md-6" ng-class="{'has-error' : form.nombre.$invalid && !form.nombre.$pristine }">
+                    <label class="control-label" for="nombre">Nombre *</label>
+                    <input name="nombre" type="text" placeholder="ingrese su nombre..." class="form-control" required ng-maxlength="50" ng-model="nombre">
+                    <span class="help-block" ng-show="form.nombre.$invalid && !form.nombre.$pristine && !form.nombre.$error.maxlength">Campo obligatorio</span>
+                    <span class="help-block" ng-show="form.nombre.$error.maxlength">Ingrese un maximo de 50 caracteres</span>
+                  </div>
+
+                  <!-- Text input-->
+                  <div class="form-group col-md-6" >
+                    <label class="control-label" for="localidad">Localidad</label>
+                    <input name="localidad" type="text" placeholder="ingrese su localidad..." class="form-control">
+                  </div>
+
+                  <!-- Text input-->
+                  <div class="form-group col-md-6">
+                    <label class="control-label" for="direccion">Dirección</label>
+                    <input name="direccion" type="text" placeholder="ingrese su direccion..." class="form-control">
+                  </div>
+
+                  <!-- Text input-->
+                  <div class="form-group col-md-6" ng-class="{'has-error' : form.telefono.$invalid && !form.telefono.$pristine }">
+                    <label class="control-label" for="telefono">Teléfono</label>
+                    <input name="telefono" type="text" placeholder="ingrese su teléfono" class="form-control" required ng-maxlength="20" ng-model="telefono">
+                    <span class="help-block" ng-show="form.telefono.$invalid && !form.telefono.$pristine && !form.telefono.$error.maxlength">Campo obligatorio</span>
+                    <span class="help-block" ng-show="form.telefono.$error.maxlength">Ingrese un maximo de 20 caracteres</span>
+                  </div>
+
+                  <!-- Text input-->
+                  <div class="form-group col-md-12" ng-class="{'has-error' : form.email.$invalid && !form.email.$pristine }">
+                    <label class="control-label" for="email">Email *</label>
+                    <input name="email" type="email" placeholder="ingrese su email..." class="form-control" required ng-maxlength="50" ng-model="email">
+                    <span class="help-block" ng-show="form.email.$invalid && !form.email.$pristine && !form.email.$error.maxlength">Ingrese un email válido</span>
+                    <span class="help-block" ng-show="form.email.$error.maxlength">Ingrese un maximo de 50 caracteres</span>
+                  </div>
+
+                  <!-- Textarea -->
+                  <div class="form-group col-md-12" ng-class="{'has-error' : form.mensaje.$invalid && !form.mensaje.$pristine }">
+                    <label class="control-label" for="mensaje">Mensaje *</label>               
+                    <textarea class="form-control" name="mensaje" placeholder="ingrese su consulta..." style="height: 184px;" required ng-maxlength="600" ng-model="mensaje"></textarea>
+                    <span class="help-block" ng-show="form.mensaje.$invalid && !form.mensaje.$pristine && !form.mensaje.$error.maxlength">Campo obligatorio</span>
+                    <span class="help-block" ng-show="form.mensaje.$error.maxlength">Ingrese un maximo de 600 caracteres</span>
+                    <div class="pull-right">
+                      <button type="reset" id="borrar" name="borrar" class="btn btn-default">Borrar</button>
+                      <button type="submit" id="btn_enviar" name="btn_enviar" class="btn btn-danger" ng-disabled="form.$invalid">Enviar</button>
+                    </div>
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                </fieldset>
+              </form>
             </div>
             <div class="clear"></div>
           </div>

@@ -1,10 +1,25 @@
 <!doctype html>
 <html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
+<head>
     <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <TITLE>Axel Pasacalles - Los mejores pasacalles del mercado</TITLE>
+        <meta http-equiv="Content-Type" content="text/html; utf-8">
+        <meta name="charset" content="utf-8" />
+        <META NAME="DC.Language" SCHEME="RFC1766" CONTENT="Spanish">
+        <META NAME="AUTHOR" CONTENT="Jorge Matias Cabañas">
+        <META NAME="REPLY-TO" CONTENT="info@axelpasacalles.com.ar">
+        <LINK REV="made" href="mailto:info@axelpasacalles.com.ar">
+        <META NAME="DESCRIPTION" CONTENT="Pasacalles de Cumpleaños - Pasacalles de agradecimientos - Pasacalles Politicos - Pasacalles de Publicidad, etc. Pintado con tinta especial alto brillo.
+        Tel: (011) 3528-2463 - ID Nextel: 566*4932 - Cel: 116-993-9316 - Email: info@axelpasacalles.com.ar
+        ">
+        <META NAME="KEYWORDS" CONTENT="ARGENTINA,Argentina,argentina,pasacalles en argentina,pasacalles en capital federal,pasa calles,pasacalle,pasacalles,pasacalles capital,pasacalles zona">
+        <META NAME="Resource-type" CONTENT="Index">
+        <META NAME="DateCreated" CONTENT="Sat, 2 August 2008 20:41:00 GMT+1">
+        <META NAME="Revisit-after" CONTENT="1 days">
+        <META NAME="robots" content="NOODP">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -14,36 +29,38 @@
     <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
     <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
     <link rel="stylesheet" href="bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.css" />
-    <!-- endbower -->loc
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body ng-app="axelWebAngularApp">
+</head>
+<body ng-app="axelWebAngularApp" lang="es">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+      <![endif]-->
 
-    <div id="contenedor">
-    
-    <side-bar></side-bar>
+      <div id="contenedor" ng-class="{'active': isActive}"
+            ng-init="isActive = false">
 
-    <!-- contenedor contenido-->
-    <div id="contenedor-contenido">
-      <div class="content-header">
-        <a id="menu-toggle" href="#" class="btn"><span class="glyphicon glyphicon-list"></span></a>
-      </div>
-      <div id="mask"></div>
+        <side-bar></side-bar>
+
+        <!-- contenedor contenido-->
+        <div id="contenedor-contenido">
+          <div class="content-header">
+            <a id="menu-toggle" href="#" class="btn" ng-click="isActive = !isActive"><span class="glyphicon glyphicon-list"></span></a>
+        </div>
+        <div id="mask"></div>
       <!-- <table class="doc-loader">
         <tr>
           <td>
             <img src="images/doc_loader/loading.gif" alt="loading..." />
           </td>
         </tr>
-      </table> -->
+    </table> -->
 
-      <div id="scrollable" du-scroll-container>
+    <div id="scrollable" du-scroll-container="scrollable">
 
         <home></home>
         <services></services>
@@ -52,15 +69,15 @@
         
         <div class="footer">
           <div class="footer_logo">
-            <img src="imagen/logo_footer.png" alt="footer_logo">
-          </div>
-          <p class="m-bottom-40">Copyright © axel pasacalles 2014. Villa Luro - Capital Federal - Argentina </p>
+            <img src="images/logo_footer.png" alt="footer_logo">
         </div>
-      </div>
-    </div><!-- fin contenedor contenido-->
-  </div>
+        <p class="m-bottom-40">Copyright © axel pasacalles 2014. Villa Luro - Capital Federal - Argentina </p>
+    </div>
+</div>
+</div><!-- fin contenedor contenido-->
+</div>
 
-    <!-- build:js(.) scripts/oldieshim.js -->
+<!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
@@ -86,12 +103,22 @@
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
     <script src="bower_components/blueimp-gallery/js/jquery.blueimp-gallery.min.js"></script>
     <script src="bower_components/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/directives/templatesdirectivas.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/directives/templatesdirectivas.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-5501998-1");
+    pageTracker._trackPageview();
+    </script>
 </body>
 </html>
