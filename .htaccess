@@ -211,8 +211,25 @@ AddDefaultCharset utf-8
 <IfModule mod_rewrite.c>
     Options +FollowSymlinks
   # Options +SymLinksIfOwnerMatch
-    RewriteEngine On
   # RewriteBase /
+
+  # .htaccess main domain to subdirectory redirect 
+  # Do not change this line. 
+  RewriteEngine on 
+  # Change example.com to be your main domain. 
+  RewriteCond %{HTTP_HOST} ^(www.)?axelpasacalles.com.ar$ 
+  # Change 'subdirectory' to be the directory you will use for your main domain. 
+  RewriteCond %{REQUEST_URI} !^/dist/ 
+  # Don't change the following two lines. 
+  RewriteCond %{REQUEST_FILENAME} !-f 
+  RewriteCond %{REQUEST_FILENAME} !-d 
+  # Change 'subdirectory' to be the directory you will use for your main domain. 
+  RewriteRule ^(.*)$ /dist/$1 
+  # Change example.com to be your main domain again. 
+  # Change 'subdirectory' to be the directory you will use for your main domain 
+  # followed by / then the main file for your site, index.php, index.html, etc. 
+  RewriteCond %{HTTP_HOST} ^(www.)?axelpasacalles.com.ar$ 
+  RewriteRule ^(/)?$ dist/index.html [L]
 </IfModule>
 
 # ------------------------------------------------------------------------------
@@ -236,11 +253,11 @@ AddDefaultCharset utf-8
 
 # Option 1: rewrite www.example.com → example.com
 
-<IfModule mod_rewrite.c>
-    RewriteCond %{HTTPS} !=on
-    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
-</IfModule>
+#<IfModule mod_rewrite.c>
+#    RewriteCond %{HTTPS} !=on
+#    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+#    RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+#</IfModule>
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
