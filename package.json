@@ -1,7 +1,10 @@
 {
   "name": "axelwebangular",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "ftp": "^0.3.10",
+    "grunt-git-ftp": "^0.1.4"
+  },
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",

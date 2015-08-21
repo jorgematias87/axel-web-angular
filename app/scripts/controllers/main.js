@@ -13,6 +13,8 @@
  app.controller('GaleriaController', ['$scope', '$http',
  	function($scope, $http){
 
+ 		$scope.date = new Date();
+
  		$scope.motivo = "cumpleaños";
  		$scope.done= false;
  		

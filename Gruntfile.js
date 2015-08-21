@@ -298,6 +298,15 @@ htmlmin: {
       }
     },
 
+    git_ftp: {
+      production: {
+        options: {
+          'hostFile':'.gitftppass',
+          'host':'default'
+        }
+      }
+    },
+
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
@@ -310,9 +319,13 @@ htmlmin: {
           '*.{ico,png,txt}',
           '.htaccess',
           '*.html',
-        'views/{,*/}*.html',
-      'images/{,*/}*.{webp}',
-      'fonts/*'
+          '*.php',
+          'views/{,*/}*.html',
+          'images/**/*',
+          'styles/font/**/*',
+          'styles/icons/**/*',
+          'fonts/*',
+          'json/*'
       ]
     }, {
       expand: true,
