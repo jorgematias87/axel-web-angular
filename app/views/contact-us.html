@@ -106,8 +106,10 @@
                     <span class="help-block" ng-show="form.mensaje.$invalid && !form.mensaje.$pristine && !form.mensaje.$error.maxlength">Campo obligatorio</span>
                     <span class="help-block" ng-show="form.mensaje.$error.maxlength">Ingrese un maximo de 600 caracteres</span>
                     <div class="pull-right">
-                      <button type="reset" id="borrar" name="borrar" class="btn btn-default">Borrar</button>
-                      <button type="submit" id="btn_enviar" name="btn_enviar" class="btn btn-danger" ng-disabled="form.$invalid">Enviar</button>
+                      <div class="form-group">
+                        <button type="reset" id="borrar" name="borrar" class="btn btn-default">Borrar</button>
+                        <button type="submit" id="btn_enviar" name="btn_enviar" class="btn btn-danger" ng-disabled="form.$invalid">Enviar</button>
+                      </div>
                     </div>
                   </div>
 
