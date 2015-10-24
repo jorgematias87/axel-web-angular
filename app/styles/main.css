@@ -317,11 +317,15 @@
     margin: 0 auto;
     padding-top: 20px;
   }
-  .logo
+  .logo img
   {    
-    width: 481px;
-    height: 186px;
     margin: 0 auto;
+  }
+
+  .img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto
   }
 
   /******************************************************************************/
@@ -1160,3 +1164,4 @@ a.thumbnail:hover {
   -ms-animation: bounceOut 1s;
   animation: bounceOut 1s;
 }
+
