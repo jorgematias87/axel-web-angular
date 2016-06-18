@@ -307,6 +307,19 @@ htmlmin: {
       }
     },
 
+    'ftp-deploy': {
+        build: {
+            auth: {
+                host: 'ftp.axelpasacalles.com.ar',
+                port: 21,
+                authKey: 'key1'
+            },
+            src: '<%= yeoman.dist %>',
+            dest: '/public_html/dist',
+            forceVerbose: true
+        }
+    },
+
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
@@ -404,7 +417,7 @@ grunt.registerTask('test', [
 
 grunt.registerTask('build', [
   'clean:dist',
-  'wiredep',
+  // 'wiredep',
   'useminPrepare',
   'concurrent:dist',
   'autoprefixer',
