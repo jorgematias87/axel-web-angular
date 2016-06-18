@@ -2,8 +2,7 @@
   "name": "axelwebangular",
   "version": "0.0.0",
   "dependencies": {
-    "ftp": "^0.3.10",
-    "grunt-git-ftp": "^0.1.4"
+    "ftp": "^0.3.10"
   },
   "devDependencies": {
     "grunt": "^0.4.1",
@@ -20,7 +19,7 @@
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-filerev": "^0.2.1",
-    "grunt-ftp-deploy": "^0.1.10",
+    "grunt-ftpush": "^0.3.3",
     "grunt-google-cdn": "^0.4.0",
     "grunt-karma": "~0.8.3",
     "grunt-newer": "^0.7.0",

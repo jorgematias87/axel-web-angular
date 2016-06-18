@@ -298,16 +298,7 @@ htmlmin: {
       }
     },
 
-    git_ftp: {
-      production: {
-        options: {
-          'hostFile':'.gitftppass',
-          'host':'default'
-        }
-      }
-    },
-
-    'ftp-deploy': {
+    'ftpush': {
         build: {
             auth: {
                 host: 'ftp.axelpasacalles.com.ar',

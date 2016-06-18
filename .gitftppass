@@ -1,9 +1,0 @@
-{
-  "default": {
-      "host": "ftp.axelpasacalles.com.ar",
-      "port": 21,
-      "user": "axelpasc",
-      "password": "576534",
-      "remotePath": "/public_html"
-  }
-} 
