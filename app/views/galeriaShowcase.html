@@ -4,7 +4,7 @@
 		Pasacalles de {{motivo}}
 	</div>
 	<ul class="list-group list-unstyled">
-		<li class="col-xs-6 col-md-3" ng-repeat="imagen in imagenes | orderBy:'index':true"  ng-init="imagen.index = $index">
+		<li class="col-xs-6 col-md-3 bounceIn animated" ng-repeat="imagen in imagenes | orderBy:'index':true"  ng-init="imagen.index = $index">
 			<a href="{{imagen.Full}}" title="Pasacalles {{$index + 1}}" class="thumbnail" data-gallery="#blueimp-gallery-{{motivo | lowercase}}">
                 <img src="{{imagen.Thumbnail}}" alt="Pasacalles {{$index + 1}}"/>
 			</a>

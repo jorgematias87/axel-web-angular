@@ -15,9 +15,9 @@
 
  		$scope.date = new Date();
 
- 		$scope.motivo = "cumpleaños";
+ 		$scope.motivo = "cumpleanios";
  		$scope.done= false;
- 		
+
  		ObtenerJSON($scope.motivo);
 
  		function ObtenerJSON (motivo){
@@ -29,10 +29,10 @@
  		};
 
  		$scope.ObtenerImagenes =  function(value){
- 			
+
  			if(value == '1')
  			{
- 				$scope.motivo = "cumpleaños";
+ 				$scope.motivo = "cumpleanios";
  			}
 
  			$scope.motivo= value;
@@ -46,7 +46,7 @@
  	this.tab = 1;
 
  	this.tabs = [
- 			{ name: 'Cumpleaños', file: 'cumpleaños', op: 1 },
+ 			{ name: 'Cumpleaños', file: 'cumpleanios', op: 1 },
  			{ name: 'Publicidad', file: 'publicidad', op: 2 },
  			{ name: 'Amor', file: 'amor', op: 3 },
  			{ name: 'Otros', file: 'otros', op: 4 },

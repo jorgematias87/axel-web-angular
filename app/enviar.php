@@ -22,7 +22,7 @@
   . "\n";
  
  $host = "mail.axelpasacalles.com.ar";
- $username = "axelpasc";
+ $username = "info@axelpasacalles.com.ar";
  $password = "576534";
  
  $headers = array ('From' => $from,
