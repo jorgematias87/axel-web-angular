@@ -1,4 +1,5 @@
 <?php
+ ini_set("include_path", '/home/axelpasa/php:' . ini_get("include_path") );
  require_once "Mail.php";
  
   @$nombre = addslashes($_POST['nombre']);
@@ -21,7 +22,7 @@
   . "Mensaje: $mensaje\n"
   . "\n";
  
- $host = "mail.axelpasacalles.com.ar";
+ $host = "wo14.wiroos.com";
  $username = "info@axelpasacalles.com.ar";
  $password = "576534";
  
