@@ -1,7 +1,7 @@
 <?php
  ini_set("include_path", '/home/axelpasa/php:' . ini_get("include_path") );
  require_once "Mail.php";
- 
+
   @$nombre = addslashes($_POST['nombre']);
   @$localidad = addslashes($_POST['localidad']);
   @$direccion = addslashes($_POST['direccion']);
@@ -21,11 +21,11 @@
   . "Email: $email\n"
   . "Mensaje: $mensaje\n"
   . "\n";
- 
- $host = "wo14.wiroos.com";
+
+ $host = "wo29.wiroos.host";
  $username = "info@axelpasacalles.com.ar";
- $password = "576534";
- 
+ $password = "p4s4c4ll3s";
+
  $headers = array ('From' => $from,
    'To' => $to,
    'Subject' => $subject);
@@ -34,9 +34,9 @@
      'auth' => true,
      'username' => $username,
      'password' => $password));
- 
+
  $mail = $smtp->send($to, $headers, $body);
- 
+
  if (PEAR::isError($mail)) {
    echo("<p>" . $mail->getMessage() . "</p>");
   } else {
@@ -44,12 +44,12 @@
    echo "<script language=\"JavaScript\" type=\"text/javascript\">
 
 	var pagina=\"index.html\"
-	function redireccionar() 
+	function redireccionar()
 	{
 	location.href=pagina
-	} 
+	}
 	setTimeout (\"redireccionar()\", 2000);
-	
+
 	</script>";
 	  }
  ?>
