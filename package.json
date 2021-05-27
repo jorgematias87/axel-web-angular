@@ -32,7 +32,15 @@
     "karma-jasmine": "~0.1.5",
     "karma-phantomjs-launcher": "^1.0.4",
     "load-grunt-tasks": "^5.1.0",
-    "time-grunt": "^0.3.1"
+    "time-grunt": "^0.3.1",
+    "underscore": ">=1.12.1",
+    "bl": ">=1.2.3",
+    "decompress-zip": ">=0.2.2",
+    "diff": ">=3.5.0",
+    "tar-fs": ">=1.16.2",
+    "shell-quote": ">=1.6.1",
+    "handlebars": ">=4.7.7",
+    "cryptiles": ">=4.1.2"
   },
   "engines": {
     "node": ">=0.10.0"
