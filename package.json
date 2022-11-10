@@ -38,7 +38,7 @@
     "karma-jasmine": "~0.1.5",
     "karma-phantomjs-launcher": "^1.0.4",
     "load-grunt-tasks": "^5.1.0",
-    "minimatch": ">=3.0.2",
+    "minimatch": ">=3.0.5",
     "shell-quote": ">=1.6.1",
     "tar-fs": ">=1.16.2",
     "time-grunt": "^0.3.1",
